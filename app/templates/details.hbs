@@ -1,0 +1,11 @@
+<h2>{{model.name}}</h2>
+
+<ul>
+	{{#each model.albums as |album|}}
+	<li>
+		{{#link-to 'albums' (query-params id=album.id)}}
+			{{album.name}}
+		{{/link-to}}
+	</li>
+	{{/each}}
+</ul>

@@ -1,0 +1,12 @@
+<h2>{{model.name}}</h2>
+<h3>Total Sold: {{model.totalSold}}</h3>
+<h3>Release Date: {{model.year}}</h3>
+
+<ul>
+	{{#each model.comments as |comment|}}
+	<li>
+		{{comment.message}}
+	</li>
+	{{/each}}
+</ul>
+

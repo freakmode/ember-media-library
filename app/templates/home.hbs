@@ -1,0 +1,12 @@
+<h2>Top 5 Artists</h2>
+
+<ol>
+	{{#each topFiveList as |artist|}}
+		<li>
+			{{#link-to "details" (query-params id=artist.id)}}
+				{{artist.name}}
+				{{artist.totalAlbumsSold}}
+			{{/link-to}}
+		</li>
+	{{/each}}
+</ol>
